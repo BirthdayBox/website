@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(href='/assets/style.css', rel='stylesheet')
+    title BirthdayBox
+  body
+    .body
+      .hero
+      .icon-wrap
+        .icon
+      h1.title BirthdayBox
+      .cards
+        for post in posts
+          if !post.hide
+            .post(postid=post.id)
+              if post.pic
+                img(src=post.pic)
+              h2=post.title
+              if post.body
+                p=post.body
+      .footer
+        .info
+          p.copyright
+            | Copyright (c) 2018 BirthdayBox All Rights Reserved.

@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1 New Post
+  form(action='/admin/newpost', method='post', autocomplete='off', enctype='multipart/form-data')
+    label(for='pic') Picture (optional)
+    br
+    input(type='file', name='pic')
+    br
+    br
+    label(for='title') Title
+    br
+    input(type='text', name='title', placeholder='Title', required)
+    br
+    br
+    label(for='body') Body (optional)
+    br
+    input(type='textarea', name='body')
+    br
+    br
+    input(type='submit')

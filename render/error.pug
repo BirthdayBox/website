@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  if err.status == 404
+    h1 oops! there's nothing here.
+  else
+    h1 oops! something went wrong.
+  h2= message
+  h3= error.status
+  unless err.status == 404
+    pre #{error.stack}
