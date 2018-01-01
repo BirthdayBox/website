@@ -90,4 +90,5 @@ p.copyright {
   font-family: monospace;
   font-size: 12px;
   color: #333;
+  max-width: 100%;
 }
